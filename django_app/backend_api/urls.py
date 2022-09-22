@@ -29,6 +29,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ishoppers.urls', namespace='ishoppers')),
     path('documentation/', schema_view, name='openapi-schema' ),
-    path('swagger/', get_swagger_view(title='Pastebin API')),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'ishoppers.Person'
 # Application definition
 
 INSTALLED_APPS = [
@@ -48,6 +48,7 @@ REST_FRAMEWORK = {
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
     ]
     }
+LOGIN_URL='/login/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
